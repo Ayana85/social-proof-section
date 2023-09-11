@@ -46,7 +46,7 @@ body {
 .box {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     background-color: hsl(300, 24%, 96%);
     margin: 1rem;
     padding:.5rem;
@@ -58,6 +58,9 @@ body {
 }
 .box-3 {
     margin-left: 3.5rem;
+}
+.star {
+    margin-right: 2rem;
 }
 .star img{
     width: .9rem; 
@@ -156,8 +159,9 @@ body {
     }
     .box {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: .5rem;
         padding:.7rem .5rem;
     }
+    
 }

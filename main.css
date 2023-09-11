@@ -5,11 +5,159 @@
 }
 
 body {
-    font-size: 15px;
-
+    background-image: url(/images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 31.3rem;     
+    height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    font-size: .9rem;
+    line-height: 1.5;
+   
 }
 /* container section */
 .container {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding:6rem 0;
+}
+/* Top section */
+.top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-col {
+    max-width: 23.4rem; 
+}
+.left-col h1 {
+    font-size: 2.5rem;
+    line-height: initial;
+    margin-bottom: 1.5rem;
+    color: hsl(300, 43%, 22%);
+}
+.right-col {
+    max-width: 25rem; 
+}
+.box {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-color: hsl(300, 24%, 96%);
+    margin: 1rem;
+    padding:.5rem;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.box-2 {
+    margin-left: 2.5rem;
+}
+.box-3 {
+    margin-left: 3.5rem;
+}
+.star img{
+    width: .9rem; 
+}
+.text p{
+    color: hsl(300, 43%, 22%);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+/* testimonials section */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.card {
+    background-color: hsl(300, 43%, 22%);
+    padding:1.5rem 2rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 7px;
+    margin-top: 1rem;
+}
+.user {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.user-img img{
+    width: 1.9rem; 
+    border-radius: 50%;
+}
+.user-detail p {
+    color: hsl(333, 80%, 67%);
+    font-size: .8rem;
+}
+.card-2 {
+    margin-top: 2rem;
+}
+.card-3 {
+    margin-top: 3rem;
+}
+
+/* media Quries */
+@media screen and (max-width: 768px) {
+    .container {
+        padding:4rem 0;
+    }
+    .top {
+        gap: 1rem;
+        grid-template-columns: 1fr ;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .left-col {
+        max-width: 100%;
+    }
+    .left-col h1 {
+        font-size: 2.3rem;
+    }
+    .right-col {
+        max-width: 100%;
+    }
+    .box-1,   
+    .box-2,
+    .box-3 {
+        margin-left: 0;
+    }
+    .testimonials {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: .5rem;
+    }
+    .card-2 {
+        margin-top: 0rem;
+    }
+    .card-3 {
+        margin-top: 0rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    body {
+        background-image: url(/images/bg-pattern-top-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size:18.8rem;
+    }
+    .left-col h1 {
+        font-size: 1.6rem;
+        line-height: initial;
+        margin-bottom: 1.5rem;
+        color: hsl(300, 43%, 22%);
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        padding:.7rem .5rem;
+    }
 }
